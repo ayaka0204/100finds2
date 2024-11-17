@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>食材の一面</title>
+ 
+  <style>
+    /* 全体のスタイル */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* ヘッダー */
+    header {
+      text-align: center;
+      background-color: #ffcb77;
+      padding: 1em 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #333;
+      font-weight: 600;
+    }
+
+    /* メインコンテンツ */
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    /* 画像のスタイル */
+    .image {
+      width: 40%;
+      border-radius: 15px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* テキストのスタイル */
+    .text {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      font-size: 1em;
+      line-height: 1.8;
+    }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+      .block {
+        flex-direction: column;
+      }
+
+      .block.reverse {
+        flex-direction: column;
+      }
+
+      .image, .text {
+        width: 100%;
+      }
+
+      .image {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>食材の一面</h1>
+  </header>
+  <main>
+    <section class="content">
+      <div class="block">
+        <img src="images/image1.png" alt="食材の画像1" class="image">
+        <p class="text">普段一人暮らしをしているため、自炊する機会が多い。そんなときに野菜や果物など、切ったときの断面や、表面の模様の変化が面白いと感じた。</p>
+      </div>
+      <div class="block reverse">
+        <p class="text">また、それぞれの食材によってさまざまな効能があるので、それらを読み手に伝えるためにこの本にまとめた。</p>
+        <img src="images/image2.png" alt="食材の画像2" class="image">
+      </div>
+      <div class="block">
+        <img src="images/image3.png" alt="食材の画像3" class="image">
+        <p class="text">子供も大人も楽しめるようにポップなデザインに仕上げている。この本を通じて料理をするときに少しでもワクワクを届けられたらいいなと思った。</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
