@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>食材の一面</title>
- 
+  <!-- Google Fontsの読み込み -->
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     /* 全体のスタイル */
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Kiwi Maru', serif;
       margin: 0;
       padding: 0;
       line-height: 1.8;
-      background-color: #f5f5f5;
+      background-color: #ffb6c1;
       color: #333;
     }
 
     /* ヘッダー */
     header {
       text-align: center;
-      background-color: #ffcb77;
+      background-color: #8fbc8f;
       padding: 1em 0;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -29,6 +30,7 @@
       margin: 0;
       color: #333;
       font-weight: 600;
+      animation: fade-in 1.5s ease-in-out;
     }
 
     /* メインコンテンツ */
@@ -48,6 +50,21 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slide-up 1.5s ease-out forwards;
+    }
+
+    .block:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    .block:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .block:nth-child(3) {
+      animation-delay: 1.5s;
     }
 
     .block.reverse {
@@ -60,6 +77,19 @@
       border-radius: 15px;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fade-in 1.5s ease-in-out forwards;
+    }
+
+    .block:nth-child(1) .image {
+      animation-delay: 0.5s;
+    }
+
+    .block:nth-child(2) .image {
+      animation-delay: 1s;
+    }
+
+    .block:nth-child(3) .image {
+      animation-delay: 1.5s;
     }
 
     .image:hover {
@@ -95,6 +125,27 @@
       .image {
         max-width: 80%;
         margin: 0 auto;
+      }
+    }
+
+    /* アニメーション */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
