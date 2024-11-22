@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Interview</title>
+    <!-- Google Fontsでキウイマルを読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      /* 全体スタイル */
+      body {
+        font-family: 'Kiwi Maru', serif;
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+        background-color: #ffeef5;
+        color: #a33a5b;
+        overflow-x: hidden;
+      }
+
+      /* レイアウト */
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* ヘッダー */
+      .header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+        color: #d44871;
+        margin-bottom: 10px;
+      }
+
+      .header span {
+        font-size: 1rem;
+        color: #d96784;
+      }
+
+      /* 写真 */
+      .photo {
+        position: relative;
+        display: block;
+        margin: 30px auto;
+        max-width: 80%;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        z-index: 2;
+      }
+
+      .photo:hover {
+        transform: scale(1.1) rotate(-2deg);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      /* 写真キャプション */
+      .caption {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #d44871;
+        margin-top: -10px;
+        margin-bottom: 30px;
+      }
+
+      /* テキストセクション */
+      .content {
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+      }
+
+      .chapter {
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: #ffeaf1;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .chapter h2 {
+        font-size: 1.2rem;
+        color: #d44871;
+        margin-bottom: 10px;
+      }
+
+      .chapter p {
+        margin: 0 0 10px;
+        color: #a33a5b;
+      }
+
+      /* レスポンシブ対応 */
+      @media (max-width: 768px) {
+        .photo {
+          max-width: 90%;
+        }
+
+        .header h1 {
+          font-size: 1.5rem;
+        }
+
+        .chapter {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>インタビュー</h1>
+        <span>大学生活について話してみよう</span>
+      </header>
+
+      <!-- 写真 -->
+      <img class="photo" src="images/photo4.png" alt="Photo 4">
+      <div class="caption">大学生活を象徴する1枚目の写真</div>
+      <img class="photo" src="images/photo5.png" alt="Photo 5">
+      <div class="caption">自由な時間の象徴となる2枚目の写真</div>
+
+      <!-- テキストセクション -->
+      <section class="content">
+        <div class="chapter">
+          <h2>なぜＳＤを選んだのか</h2>
+          <p>インタビュアー：どんなモチベーションでSDを選びましたか。</p>
+          <p>話者：美術がとても好きで、美術系を勉強できる大学を探していました。</p>
+          <p>でも美大行ったらすごい美術でたくさんやんなきゃいけない感じがしたのです。</p>
+          <p>見つけたのがこの学部だったのでSD学科を選びました。</p>
+          <p>インタビュアー：もともと絵が好きだったのですか。</p>
+          <p>話者：絵描くのが好きで、高校の時美術部でした。</p>
+          <p>けれど、大学で美術系のことをやっていけるか不安でした。</p>
+          <p>インタビュアー：なるほど。</p>
+        </div>
+        <div class="chapter">
+          <h2>大学での変化</h2>
+          <p>インタビュアー：次の質問です。高校から大学に入ってどう変わりましたか。</p>
+          <p>話者：なんか1人で何でもできるようになって、自由度が増していいなって思いました。</p>
+          <p>あと、興味のある分野が同じ人が多いので、結構話していて楽しい人が増えたかなと思います。</p>
+        </div>
+        <div class="chapter">
+          <h2>大学での時間</h2>
+          <p>インタビュアー：大学に入ってできた自由な時間で何か新しいこととか始めたりしましたか。</p>
+          <p>話者：動画を友達と作ったりするようになりました。</p>
+          <p>あとは普通にボードゲームとか好きで、一緒に遊んでみたりすることが多いです。</p>
+          <p>インタビュアー：動画はどのような動画を作るのですか。</p>
+          <p>話者：多様なのですが、1人で作るのは文字の動画が多いです。</p>
+          <p>PVみたいな文字が動いたりするやつが好きで、友達と撮るのは実写で撮って編集までやってみたりしています。</p>
+          <p>ただ、習っているわけではないので、わかんないことが多いです。</p>
+          <p>インタビュアー：そのような動画制作時の技術とかは自分でネットから盗んだりしているのですか。</p>
+          <p>話者：そうです。</p>
+          <p>インタビュアー：すごいですね。</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
